@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #3498db; /* Background color for the entire page */
+    color: #ecf0f1; /* Text color */
+    font-family: 'Arial', sans-serif;
+}
+
+#welcome-message {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px;
+    animation: fadeIn 1s ease-out;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #34495e; /* Border color for cells */
+    cursor: pointer;
+    background-color: #2c3e50; /* Cell background color */
+    color: #ecf0f1; /* Cell text color */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.cell:hover {
+    background-color: #3498db; /* Hover background color */
+}
+
+.player-x {
+    color: #e74c3c; /* Color for X */
+}
+
+.player-o {
+    color: #2ecc71; /* Color for O */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
